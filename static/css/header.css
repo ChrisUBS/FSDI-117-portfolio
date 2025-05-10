@@ -1,0 +1,54 @@
+header {
+    height: 60px;
+    background-color: var(--primary-color);
+    top: 0px;
+    position: sticky;
+    z-index: 1000;
+}
+
+.header-left-side {
+    width: 30%;
+}
+
+.header-right-side {
+    width: 70%;
+}
+
+.nav-options {
+    width: 100%;
+}
+
+.nav-options a {
+    /* color: white; */
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 2% 2%;
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+}
+
+.nav-options a:hover {
+    border-bottom: solid 1px white;
+}
+
+/* Hambuger Button  */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-btn span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px auto;
+    display: block;
+}
+
+#nav-check, .nav-btn {
+    display: none;
+}

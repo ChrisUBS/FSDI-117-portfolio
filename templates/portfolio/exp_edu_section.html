@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Experience And Education{% endblock title %}
+
+{% block content %}
+<section class="experience-education-section center-column">
+    <h2 class="subtitles">Experience And Education</h2>
+    <div class="projects-list center-row">
+        <!-- One card per project -->
+        {% for entry in timeline %}
+        <div class="entry-card">
+            <p><strong>{{ entry.name }}</strong></p>
+            <p><em>{{ entry.title }}</em></p>
+            <p>{{ entry.description }}</p>
+            <p><strong>{{ entry.from_date|date:"F Y" }} - {{ entry.to_date|date:"F Y" }}</strong></p>
+            <div class="project-skills center-row">
+                {% for skill in entry.skills.all %}
+                <label class="text-label">{{ skill.name }}</label>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}

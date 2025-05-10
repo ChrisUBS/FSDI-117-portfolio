@@ -1,0 +1,94 @@
+@media (max-width: 640px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .header-left-side {
+        width: 100%;
+        /* margin: 1rem 0px; */
+    }
+
+    .header-right-side {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-options {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .show {
+        display: flex;
+    }
+
+    /* .nav-options {
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    } */
+    
+    .nav-btn {
+        display: block;
+        margin-left: 10px;
+    }
+
+    /* Toggle Funtion*/
+    #nav-check:not(:checked) {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #nav-check:checked ~ .nav-options {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+
+@media(max-width:1007px) and (min-width:641px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:765px) and (min-width:641px) {
+    .nav-options a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1007px) {
+    /* Responsive Design For Each Section */
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-image-container {
+        width: 40%;
+    }
+
+    .about-description-container {
+        width: 100%;
+    }
+}

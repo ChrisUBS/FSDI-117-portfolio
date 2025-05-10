@@ -1,0 +1,182 @@
+/* About Me Section */
+.about-section, .skills-section, .projects-section, .experience-education-section, .contact-section {
+    padding: 2rem;
+}
+
+.skills-section {
+    padding-top: 0px;
+}
+
+.about-image-container {
+    width: 30%;
+}
+
+.about-image-container img {
+    width: 80%;
+}
+
+.about-description-container {
+    width: 70%;
+    text-align: center;
+}
+
+.about-description-container p {
+    margin-top: 2rem;
+}
+
+/* Skills Section */
+
+.skills-list {
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Projects Section */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* clave para igualar alturas */
+    width: 80%;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    width: 25rem;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+
+    /* Other way to fix the elements */
+    /* flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.project-card p {
+    margin: 0.5rem;
+}
+
+.project-skills {
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Experience or Education Section */
+.entry-card {
+    width: 25rem;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Controladores del formulario */
+.form-controlers {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-controlers button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-controlers button[type="reset"] {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.form-controlers button[type="reset"]:hover {
+    background-color: #e0e0e0;
+}
+
+.form-controlers button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.form-controlers button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}

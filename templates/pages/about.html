@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock title %}
+
+{% block content %}
+<section class="about-section center-row">
+    <div class="about-image-container center-row">
+        <img src="{% static 'img/picture.png' %}" alt="my picture">
+    </div>
+    <div class="about-description-container">
+        <h1>Full Stack Software Engineer</h1>
+        <h2 class="subtitles">Christian Bonilla</h2>
+
+        <p> Software Engineering student at UABC with experience in web development, programming, and project
+            management. I have worked on various academic and personal projects, which has allowed me to apply
+            agile methodologies, use modern technologies, and develop functional solutions with a practical approach. I
+            adapt quickly to new environments and always seek to improve my skills through continuous learning.
+            <br><br>
+            I enjoy collaborating with teams, sharing knowledge, and providing efficient solutions. I have led teams of
+            3
+            to 8 people, fostering organization and achieving goals. I am motivated by creating technology that has a
+            positive impact, solving real problems, and continuing to grow both technically and professionally.
+        </p>
+    </div>
+</section>
+
+<section class="skills-section center-column">
+    <h2 class="subtitles">My Skills</h2>
+
+    <div class="skills-list center-row">
+        {% for skill in skills %}
+        <label class="text-label">{{ skill.name }}</label>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}
