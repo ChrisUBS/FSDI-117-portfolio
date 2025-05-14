@@ -47,7 +47,7 @@
         overflow: hidden;
         transition: height 0.3s ease;
     } */
-    
+
     .nav-btn {
         display: block;
         margin-left: 10px;
@@ -59,9 +59,26 @@
         overflow: hidden;
     }
 
-    #nav-check:checked ~ .nav-options {
+    #nav-check:checked~.nav-options {
         height: auto;
         overflow: auto;
+    }
+
+    /* Add a New Project */
+    .project-hero {
+        display: flex!important;
+        flex-direction: column!important;
+        position: static!important;
+    }
+
+    .project-title {
+        position: static!important;
+        transform: none!important;
+    }
+    
+    .project-hero a {
+        margin-left: 0px!important;
+        margin-top: 1rem;
     }
 }
 
@@ -79,6 +96,7 @@
 }
 
 @media (max-width:1007px) {
+
     /* Responsive Design For Each Section */
     .about-section {
         flex-direction: column;

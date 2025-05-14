@@ -5,9 +5,14 @@
 
 {% block content %}
 <section class="projects-section center-column">
-    <h2 class="subtitles">Projects</h2>
-    <div class="projects-list center-row">
+    <div class="project-hero">
+        <h2 class="project-title">Projects</h2>
+        {% if user.is_authenticated %}
+        <a href="{% url 'new_project' %}">Add New Project</a>
+        {% endif %}
+    </div>
 
+    <div class="projects-list center-row">
         <!-- One card per project -->
         {% for project in projects %}
         <div class="project-card">
@@ -18,13 +23,20 @@
                 <p>{{ project.year }}</p>
                 <div class="project-skills center-row">
                     {% for skill in project.skills.all %}
-                        <label class="text-label">{{ skill.name }}</label>
+                    <label class="text-label">{{ skill.name }}</label>
                     {% endfor %}
                 </div>
             </a>
         </div>
         {% endfor %}
-
     </div>
+
+    <script>
+        function toggleForm() {
+            const form = document.getElementById("project-form");
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        }
+    </script>
+
 </section>
 {% endblock content %}

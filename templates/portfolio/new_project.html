@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Add New Project{% endblock title %}
+
+{% block content %}
+<section class="contact-section center-column">
+    <h2 class="subtitles">Add New Project</h2>
+    <p>Here you can add a new project!</p>
+    <!-- Form -->
+    <form class="center-column" method="POST" id="contactForm" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.description }}
+        {{ form.year }}
+        {{ form.skills }}
+        {{ form.img }}
+        {{ form.web_link }}
+
+        <div class="form-controlers">
+            <button type="reset">Reset</button>
+            <button type="submit">Add Project</button>
+        </div>
+    </form>
+</section>
+{% endblock content %}
